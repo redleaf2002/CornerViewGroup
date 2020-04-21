@@ -63,7 +63,7 @@
 </com.leaf.customviewgroup.CornerConstraintLayout>
 ```
 
-<img src="https://github.com/redleaf2002/CornerViewGroup/blob/master/88a419bdc21a6db0a4985e031.jpg" width="400" />
+<img src="https://github.com/redleaf2002/CornerViewGroup/blob/master/88a419bdc21a6db0a4985e031.jpg" width="350" />
 
 ######  2.设置部分圆角，比如整体布局左上和右下有圆角为20dp
 ```java
@@ -96,8 +96,40 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/img"/>
     </com.leaf.customviewgroup.CornerFrameLayout>
- ```
-  <img src="https://github.com/redleaf2002/CornerViewGroup/blob/master/1ef68975d48e7940a25f5e2b3.jpg" width="400" />
+```
+  <img src="https://github.com/redleaf2002/CornerViewGroup/blob/master/1ef68975d48e7940a25f5e2b3.jpg" width="350" />
   
   ######  3.设置透明边，比如整体布局有四个圆角为20dp，并且有半透明10dp的边
-  
+```java
+  <com.leaf.customviewgroup.CornerConstraintLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:strokeColor="#80ffffff"
+    app:strokeWidth="20dp">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
+        android:src="@mipmap/beautiful_img"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_gravity="bottom"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/test1_image"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img" />
+
+</com.leaf.customviewgroup.CornerConstraintLayout>
+ ```
+<img src="https://github.com/redleaf2002/CornerViewGroup/blob/master/19b86645d749f3f125a0639f4.jpg" width="350" />
