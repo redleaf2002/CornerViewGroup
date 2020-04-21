@@ -2,8 +2,8 @@
 自定义可以自由设定每个圆角的CornerConstraintLayout和CornerFragmeLayout，如果想继承其他任何的ViewGroup，只需要拷贝CornerConstraintLayout或者CornerFrameLayout这个类，然后继承改为自己需要的ViewGroup
 
 ##### 1.引用 分两步
-####### 1.直接拷贝CornerConstraintLayout和CornerFragmeLayout这两个类
-####### 2.拷贝atts文件里面的属性 
+###### 1.直接拷贝CornerConstraintLayout和CornerFragmeLayout这两个类
+###### 2.拷贝atts文件里面的属性 
 ```java
 <declare-styleable name="CustomCorner">
         <attr name="topRightRadius" format="dimension" />
