@@ -1,9 +1,17 @@
-# CornerViewGroup
-自定义可以自由设定每个圆角的CornerConstraintLayout和CornerFragmeLayout，如果想继承其他任何的ViewGroup，只需要拷贝CornerConstraintLayout或者CornerFrameLayout这个类，然后继承改为自己需要的ViewGroup
+# CornerViewGroup 圆角容器
+实现了CornerConstraintLayout和CornerFragmeLayout两个自定义的ViewGroup。不管其中的子view如何布局，都可以自由设定整体布局的圆角。
 
-##### 1.引用 分两步
-###### 1.直接拷贝CornerConstraintLayout和CornerFragmeLayout这两个类
-###### 2.拷贝atts文件里面的属性 
+#### 1.特点
+
+###### 1.易用：
+不会影响原来的布局，只需要替换对应的ViewGroup
+###### 2.易扩展：
+目前针对了ConstraintLayout和FragmentLayout实现了CornerContraintLayout CornerFrameLay头，如果想实现基于其他的VeiwGroup如LinearLayout，RelativeLayout的控件，完全复用CornerContrainerLayout的代码，只需要把对应的继承类ConstaintLayout替换成LinearLayout或者RelativeLayout。
+
+#### 2.引入布局，只需要简单的两步
+
+###### 1.直接拷贝CornerConstraintLayout和CornerFragmeLayout类
+###### 2.拷贝atts文件里面的属性到自己的atts文件中
 ```java
 <declare-styleable name="CustomCorner">
         <attr name="topRightRadius" format="dimension" />
@@ -16,8 +24,15 @@
     </declare-styleable>
 ```
 
+#### 3.提供的功能：
+#####1.直接定义四个角的半径
+#####2.分别定义每个圆角的半径
+#####3.设置边的颜色和宽度。比如可以设置整体布局有10dp的半透明的边
 
-##### 2.使用：直接在布局文件中使用，使用上面的属性可以单独设置任意位置的圆角 如下面例子设置四个圆角
+#### 4.使用实例：
+直接在布局文件中使用，使用上面的atts文件中的属性可以单独设置任意位置的圆角 
+
+###### 1.设置四个圆角
 ```java
   android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -48,9 +63,9 @@
 </com.leaf.customviewgroup.CornerConstraintLayout>
 ```
 
-![image](https://github.com/redleaf2002/CornerViewGroup/blob/master/88a419bdc21a6db0a4985e031.jpg)
+<img src="https://github.com/redleaf2002/CornerViewGroup/blob/master/88a419bdc21a6db0a4985e031.jpg" width="400" />
 
-##### 3.左上和右下有圆角
+######  2.设置部分圆角，比如整体布局左上和右下有圆角为20dp
 ```java
 <com.leaf.customviewgroup.CornerFrameLayout
         android:layout_width="wrap_content"
@@ -82,5 +97,7 @@
             app:layout_constraintTop_toBottomOf="@+id/img"/>
     </com.leaf.customviewgroup.CornerFrameLayout>
  ```
-   
-   ![image](https://github.com/redleaf2002/CornerViewGroup/blob/master/1ef68975d48e7940a25f5e2b3.jpg)
+  <img src="https://github.com/redleaf2002/CornerViewGroup/blob/master/1ef68975d48e7940a25f5e2b3.jpg" width="400" />
+  
+  ######  3.设置透明边，比如整体布局有四个圆角为20dp，并且有半透明10dp的边
+  
