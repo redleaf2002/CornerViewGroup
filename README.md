@@ -18,7 +18,7 @@
 
 
 ##### 2.使用：直接在布局文件中使用，使用上面的属性可以单独设置任意位置的圆角 设置四个圆角
-
+```java
   android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     app:radius="20dp"
@@ -46,10 +46,10 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img"/>
 </com.leaf.customviewgroup.CornerConstraintLayout>
-
+```
 
 ##### 3.左上和右下有圆角
-
+```java
 <com.leaf.customviewgroup.CornerFrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -79,3 +79,4 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/img"/>
     </com.leaf.customviewgroup.CornerFrameLayout>
+    ```
