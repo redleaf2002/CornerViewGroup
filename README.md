@@ -48,6 +48,8 @@
 </com.leaf.customviewgroup.CornerConstraintLayout>
 ```
 
+![image](https://github.com/redleaf2002/CornerViewGroup/blob/master/88a419bdc21a6db0a4985e031.jpg)
+
 ##### 3.左上和右下有圆角
 ```java
 <com.leaf.customviewgroup.CornerFrameLayout
@@ -79,4 +81,6 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/img"/>
     </com.leaf.customviewgroup.CornerFrameLayout>
-    ```
+ ```
+   
+   ![image](https://github.com/redleaf2002/CornerViewGroup/blob/master/1ef68975d48e7940a25f5e2b3.jpg)
