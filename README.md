@@ -17,7 +17,7 @@
 ```
 
 
-##### 2.使用：直接在布局文件中使用，使用上面的属性可以单独设置任意位置的圆角 设置四个圆角
+##### 2.使用：直接在布局文件中使用，使用上面的属性可以单独设置任意位置的圆角 如下面例子设置四个圆角
 ```java
   android:layout_width="wrap_content"
     android:layout_height="wrap_content"
