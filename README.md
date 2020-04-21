@@ -2,14 +2,14 @@
 实现了CornerConstraintLayout和CornerFragmeLayout两个自定义的ViewGroup。不管其中的子view如何布局，都可以自由设定整体布局的圆角。
 
 #### 1.特点
-###### 1.易用：
+1.易用：  
 不会影响原来的布局，只需要替换对应的ViewGroup
-###### 2.易扩展：
+2.易扩展：  
 目前针对了ConstraintLayout和FragmentLayout实现了CornerContraintLayout CornerFrameLay头，如果想实现基于其他的VeiwGroup如LinearLayout，RelativeLayout的控件，完全复用CornerContrainerLayout的代码，只需要把对应的继承类ConstaintLayout替换成LinearLayout或者RelativeLayout。
 
 #### 2.引入布局，只需要简单的两步
-###### 1.直接拷贝CornerConstraintLayout和CornerFragmeLayout类
-###### 2.拷贝atts文件里面的属性到自己的atts文件中
+1.直接拷贝CornerConstraintLayout和CornerFragmeLayout类  
+2.拷贝atts文件里面的属性到自己的atts文件中  
 ```java
 <declare-styleable name="CustomCorner">
         <attr name="topRightRadius" format="dimension" />
@@ -23,9 +23,9 @@
 ```
 
 #### 3.提供的功能：
-##### 1.直接定义四个角的半径
-##### 2.分别定义每个圆角的半径
-##### 3.设置边的颜色和宽度。比如可以设置整体布局有10dp的半透明的边
+1.直接定义四个角的半径  
+2.分别定义每个圆角的半径  
+3.设置边的颜色和宽度。比如可以设置整体布局有10dp的半透明的边  
 
 #### 4.使用实例：
 直接在布局文件中使用，使用上面的atts文件中的属性可以单独设置任意位置的圆角 
