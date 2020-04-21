@@ -2,14 +2,12 @@
 实现了CornerConstraintLayout和CornerFragmeLayout两个自定义的ViewGroup。不管其中的子view如何布局，都可以自由设定整体布局的圆角。
 
 #### 1.特点
-
 ###### 1.易用：
 不会影响原来的布局，只需要替换对应的ViewGroup
 ###### 2.易扩展：
 目前针对了ConstraintLayout和FragmentLayout实现了CornerContraintLayout CornerFrameLay头，如果想实现基于其他的VeiwGroup如LinearLayout，RelativeLayout的控件，完全复用CornerContrainerLayout的代码，只需要把对应的继承类ConstaintLayout替换成LinearLayout或者RelativeLayout。
 
 #### 2.引入布局，只需要简单的两步
-
 ###### 1.直接拷贝CornerConstraintLayout和CornerFragmeLayout类
 ###### 2.拷贝atts文件里面的属性到自己的atts文件中
 ```java
@@ -99,7 +97,7 @@
 ```
   <img src="https://github.com/redleaf2002/CornerViewGroup/blob/master/1ef68975d48e7940a25f5e2b3.jpg" width="350" />
   
-  ######  3.设置透明边，比如整体布局有四个圆角为20dp，并且有半透明10dp的边
+  ######  3.设置透明边，比如整体布局有有半透明20dp的边
 ```java
   <com.leaf.customviewgroup.CornerConstraintLayout
     android:layout_width="wrap_content"
