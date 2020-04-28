@@ -1,14 +1,14 @@
 # CornerViewGroup 圆角容器
-实现了CornerConstraintLayout和CornerFragmeLayout两个自定义的ViewGroup。不管其中的子view如何布局，都可以自由设定整体布局的圆角。
+实现了CornerConstraintLayout和CornerFragmeLayout两个自定义的ViewGroup。不管其中的子view如何布局，都可以自由设定带有圆角的整体布局。
 
 #### 1.特点
 ###### 1.易用：  
-不会影响原来的布局，只需要替换对应的ViewGroup
+不会影响原来的布局，只需要替换对应的ViewGroup,就可以使用带有圆角的布局。如果设置宽高相等，圆角半径为宽高的一半，那整个布局就是圆形。
 ###### 2.易扩展：  
 目前针对了ConstraintLayout和FragmentLayout实现了CornerContraintLayout CornerFrameLay头，如果想实现基于其他的VeiwGroup如LinearLayout，RelativeLayout的控件，完全复用CornerContrainerLayout的代码，只需要把对应的继承类ConstaintLayout替换成LinearLayout或者RelativeLayout。
 
 #### 2.引入布局，只需要简单的两步
-###### 1.直接拷贝CornerConstraintLayout和CornerFragmeLayout类  
+###### 1.直接拷贝CornerConstraintLayout类或者CornerFrameLayout类
 ###### 2.拷贝atts文件里面的属性到自己的atts文件中  
 ```java
 <declare-styleable name="CustomCorner">
@@ -22,10 +22,11 @@
     </declare-styleable>
 ```
 
-#### 3.提供的功能：
+#### 3.提供的功能，在第四部分会有对应的使用实例：
 1.直接定义四个角的半径  
-2.分别定义每个圆角的半径  
-3.设置边的颜色和宽度。比如可以设置整体布局有10dp的半透明的边  
+2.设置为圆形布局
+3.分别定义每个圆角的半径  
+4.设置边的颜色和宽度。比如可以设置整体布局有10dp的半透明的边  
 
 #### 4.使用实例：
 直接在布局文件中使用，使用上面的atts文件中的属性可以单独设置任意位置的圆角 
@@ -60,10 +61,31 @@
         app:layout_constraintTop_toBottomOf="@+id/img"/>
 </com.leaf.customviewgroup.CornerConstraintLayout>
 ```
-
 <img src="https://github.com/redleaf2002/CornerViewGroup/blob/master/88a419bdc21a6db0a4985e031.jpg" width="350" />
 
-######  2.设置部分圆角，比如整体布局左上和右下有圆角为20dp
+######  2.设置圆形，布局的高宽相等，圆角半径为高宽的一半
+```java
+<com.leaf.customviewgroup.CornerConstraintLayout
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:radius="150dp">
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerInside"
+        android:src="@mipmap/beautiful_img"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</com.leaf.customviewgroup.CornerConstraintLayout>
+
+```
+<img src="https://github.com/redleaf2002/CornerViewGroup/blob/master/d4117c8d9cb06ccb710971bac.png" width="350" />
+
+######  3.设置部分圆角，比如整体布局左上和右下有圆角为20dp
 ```java
 <com.leaf.customviewgroup.CornerFrameLayout
         android:layout_width="wrap_content"
@@ -97,7 +119,7 @@
 ```
   <img src="https://github.com/redleaf2002/CornerViewGroup/blob/master/1ef68975d48e7940a25f5e2b3.jpg" width="350" />
   
-  ######  3.设置透明边，比如整体布局有有半透明20dp的边
+  ######  4.设置透明边，比如整体布局有有半透明20dp的边
 ```java
   <com.leaf.customviewgroup.CornerConstraintLayout
     android:layout_width="wrap_content"
