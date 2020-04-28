@@ -9,7 +9,7 @@
 
 #### 2.引入布局，只需要简单的两步
 ###### 1.直接拷贝CornerConstraintLayout类或者CornerFrameLayout类
-###### 2.拷贝atts文件里面的属性到自己的atts文件中  
+###### 2.拷贝attrs文件里面的属性到自己的attrs文件中  
 ```java
 <declare-styleable name="CustomCorner">
         <attr name="topRightRadius" format="dimension" />
@@ -33,6 +33,7 @@
 
 ###### 1.设置四个圆角
 ```java
+<com.leaf.customviewgroup.CornerConstraintLayout
   android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     app:radius="20dp"
