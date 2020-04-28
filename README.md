@@ -1,9 +1,10 @@
 # CornerViewGroup 圆角容器
 实现了CornerConstraintLayout和CornerFragmeLayout两个自定义的ViewGroup。不管其中的子view如何布局，都可以自由设定带有圆角的整体布局。
+如果设置宽高相等，圆角半径为宽高的一半，那整个布局就是圆形
 
 #### 1.特点
 ###### 1.易用：  
-不会影响原来的布局，只需要替换对应的ViewGroup,就可以使用带有圆角的布局。如果设置宽高相等，圆角半径为宽高的一半，那整个布局就是圆形。
+不会影响原来的布局，只需要替换对应的ViewGroup,就可以使用带有圆角的布局。。
 ###### 2.易扩展：  
 目前针对了ConstraintLayout和FragmentLayout实现了CornerContraintLayout CornerFrameLay头，如果想实现基于其他的VeiwGroup如LinearLayout，RelativeLayout的控件，完全复用CornerContrainerLayout的代码，只需要把对应的继承类ConstaintLayout替换成LinearLayout或者RelativeLayout。
 
