@@ -8,7 +8,14 @@
 ###### 2.易扩展：  
 目前针对了ConstraintLayout和FragmentLayout实现了CornerContraintLayout CornerFrameLay头，如果想实现基于其他的VeiwGroup如LinearLayout，RelativeLayout的控件，完全复用CornerContrainerLayout的代码，只需要把对应的继承类ConstaintLayout替换成LinearLayout或者RelativeLayout。
 
-#### 2.引入布局，只需要简单的两步
+
+#### 2.使用：有两种方式
+##### 1.直接通过jcenter引用
+```java
+implementation 'com.leaf:corner:1.0.0'
+```
+
+##### 2.引入布局，只需要简单的两步
 ###### 1.直接拷贝CornerConstraintLayout类或者CornerFrameLayout类
 ###### 2.拷贝attrs文件里面的属性到自己的attrs文件中  
 ```java
