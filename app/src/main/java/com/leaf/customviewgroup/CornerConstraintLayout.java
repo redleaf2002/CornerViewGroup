@@ -174,4 +174,12 @@ public class CornerConstraintLayout extends ConstraintLayout {
         }
     }
 
+    public void setCornderRadius(float topLeftRadius, float topRightRadius, float bottomLeftRadius, float bottomRightRadius) {
+        this.topLeftRadius = topLeftRadius;
+        this.topRightRadius = topRightRadius;
+        this.bottomLeftRadius = bottomLeftRadius;
+        this.bottomRightRadius = bottomRightRadius;
+        postInvalidate();
+    }
+
 }
