@@ -1,4 +1,4 @@
-package com.leaf.customviewgroup;
+package com.leaf.corner;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -9,8 +9,6 @@ import android.graphics.Path;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.RectF;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
 
@@ -28,7 +26,7 @@ public class CornerFrameLayout extends FrameLayout {
     private Paint mPaint;
     private int width, height;
 
-    public CornerFrameLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
+    public CornerFrameLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
         if (attrs != null) {
             TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.CustomCorner);

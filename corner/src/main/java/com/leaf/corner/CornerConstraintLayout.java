@@ -1,4 +1,4 @@
-package com.leaf.customviewgroup;
+package com.leaf.corner;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -9,10 +9,9 @@ import android.graphics.Path;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.RectF;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.constraint.ConstraintLayout;
 import android.util.AttributeSet;
+
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class CornerConstraintLayout extends ConstraintLayout {
     private float topLeftRadius;
@@ -28,7 +27,7 @@ public class CornerConstraintLayout extends ConstraintLayout {
     private Paint mPaint;
     private int width, height;
 
-    public CornerConstraintLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
+    public CornerConstraintLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
         if (attrs != null) {
             TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.CustomCorner);
